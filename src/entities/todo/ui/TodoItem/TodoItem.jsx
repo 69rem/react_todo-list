@@ -1,8 +1,8 @@
-import {memo, useContext } from 'react'
+import { memo, useContext } from 'react'
 import { TasksContext } from '@/entities/todo'
 import RouterLink from '@/shared/ui/RouterLink'
 import styles from './TodoItem.module.scss'
-import {highlightCaseInsensitive} from "@/shared/utils/highlight.js";
+import { highlightCaseInsensitive } from "@/shared/utils/highlight.js";
 
 const TodoItem = (props) => {
   const {
@@ -49,7 +49,7 @@ const TodoItem = (props) => {
         >
           {title}
         </label>
-        <RouterLink to={`/tasks/${id}`} aria-label="Task detail page">
+        <RouterLink to={`tasks/${id}`} aria-label="Task detail page">
           <span dangerouslySetInnerHTML={{ __html: highlightedTitle }} />
         </RouterLink>
         <button
